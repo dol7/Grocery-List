@@ -1,10 +1,10 @@
 # Grocery-List App
 Grocery List
 Web page will load with:
- 1.input field to add grocery items with add button
- 2. empty list
- 3. Clear button
- 4. Local storage
+ - input field to add grocery items with add button
+ - empty list
+ - Clear button
+ - Local storage
  
 Given shopper goes to supermarket and wants to remember what to buy 
 When shopper adds item in input field AND hits Enter or Add to List Button
