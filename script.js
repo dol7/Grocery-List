@@ -3,11 +3,23 @@ var groceryItem = document.querySelector('ul');
 var buttonClearAll = document.querySelector('#clear-list');
 var inputGroceryItem =document.getElementById('item');
 
+//var itemsArray = [];
+var itemsArray = localStorage.getItem('groceryItems') ? JSON.parse(localStorage.getItem('groceryItems')) :[];
+
+localStorage.setItem('groceryItems',JSON.stringify(itemsArray));
+
+var storage = JSON.parse(localStorage.getItem('groceryItems'));
+
+
 formField.addEventListener('submit', function(e) {
     e.preventDefault();
+
+    itemsArray.push(inputGroceryItem.value);
+    localStorage.setItem('groceryItems',JSON.stringify(itemsArray));
+
     addGroceryList(inputGroceryItem.value);
     inputGroceryItem.value='';
-    //console.log(inputGroceryItem.value);
+    
 });
 
 
@@ -19,13 +31,14 @@ var addGroceryList = function(text) {
 
 }
 
+for (var i=0; i< storage.length; i++) {
+
+    addGroceryList(storage[i]);
+}
+
 buttonClearAll.addEventListener('click',function() {
 
-    console.log("clicked butt");
-});
-
-buttonClearAll.addEventListener('click',function() {
-
+    localStorage.clear();
     while (groceryItem.firstChild) {
         groceryItem.removeChild(groceryItem.firstChild);
 
