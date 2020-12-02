@@ -17,3 +17,7 @@ Then ONLY selected item is crossed out
 Given shopper doesn't need list
 When hitting Clear all button
 Then all items are removed from list AND list is empty
+
+Given shopper creates a list
+when refresh page
+Then list persists on page
