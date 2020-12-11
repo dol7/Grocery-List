@@ -1,19 +1,41 @@
 body {
     padding: 15px;
     background-color: #66CCFF;
-    font-family: sans-serif;
+    font-family: "Permanent Marker";
     }
+.container {
+    width: 50%;
+    margin:auto;
+}
+
 #title {
+    text-align: center;
     padding: 10px;
     font-size: 36px;
     border: 2px solid #ffffff;
     width: 250px;
 
 }
+.form {
+    text-align: 5%;
+
+}
+svg {
+    float:left;
+}
+
+#item {
+    background-color: #66CCFF;
+   
+    outline: 0;
+    border: 0 solid;
+    border-bottom-width: 3px;
+    
+}
 
 #Grocery-List {
     font-size: 36px;
-}
+    }
 
 ul {
     list-style: none;
@@ -21,10 +43,12 @@ ul {
     width: 250px;
 }
 
-li {
+ul li.checked {
     color: #333;
     background-color: rgb(255,255,255,.5);
+    padding: 15px;
     margin-bottom: 15px;
     border-radius: 5px;
+    text-decoration: line-through;
     
 }
